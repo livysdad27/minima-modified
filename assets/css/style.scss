@@ -4,4 +4,4 @@
 
 @import
   "minima-modified/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima-modified/initialize";
+  "minima/initialize";

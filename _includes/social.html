@@ -1,11 +1,6 @@
 {%- assign social = site.minima-modified.social_links -%}
 <pre id="jekyll-debug"></pre>
-<script>
-  var obj = JSON.parse(decodeURIComponent("{{ site | jsonify | uri_escape }}"));
-  var prettyJson = JSON.stringify(obj, null, 4);  // Pretty-printed JSON (indented 4 spaces).
-  document.getElementById("jekyll-debug").textContent = prettyJson;
-</script>
-</pre>
+
 <ul class="social-media-list">
   
   {%- for glb in social.gitlab -%}{%- if glb.username and glb.instance -%}<li><a rel="me" href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}" target="_blank" title="{{ glb.username | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#gitlab' | relative_url }}"></use></svg></a></li>{%- endif -%}{%- endfor -%}

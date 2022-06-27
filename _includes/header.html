@@ -5,6 +5,7 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
     {%- assign extras = site.minima-modified.extra_nav -%}
+    {%- assign pesto = site.minima-modified.testo -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if titles_size > 0 -%}
@@ -27,6 +28,9 @@
           {%- endfor -%}
           {%- for stuff in extras -%} 
           <a class="page-link" href="{{ stuff.url }}">{{ stuff.name }}</a>
+          {%- endfor -%}
+          {%- for things in pesto -%} 
+          {{ things[0] }}
           {%- endfor -%}
         </div>
       </nav>

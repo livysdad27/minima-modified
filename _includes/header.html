@@ -26,7 +26,7 @@
             {%- endif -%}
           {%- endfor -%}
           {%- for stuff in extras -%} 
-          {{ stuff.name }}
+          <a class="page-link" href="{{ stuff.url }}">{{ stuff.name }}</a>
           {%- endfor -%}
         </div>
       </nav>

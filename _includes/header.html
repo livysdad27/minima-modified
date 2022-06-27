@@ -24,7 +24,7 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          {{ site.extra_nav }}
+          {{ site.author.name }}
           {%- unless site.extra_nav == empty -%}
             {%- for external_site in site.extra_nav -%} 
               <a class="page-link" href="{{ external_site[1].url }}">{{ external_site[0] | escape }}</a>

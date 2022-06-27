@@ -24,7 +24,7 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          {%- unless site.extra_nav == empty }
+          {%- unless site.extra_nav == empty -%}
           <a class="page-link" href="https://weather.boggyhollowfarm.com">Weather Report</a>"{{ site.extra_nav }}"
           {%- endunless -%}
         </div>

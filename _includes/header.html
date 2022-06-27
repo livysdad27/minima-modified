@@ -26,11 +26,9 @@
             {%- endif -%}
           {%- endfor -%}
           {{ extras }}
-          {%- unless site.extra_nav == empty -%}
-            {%- for external_site in site.extra_nav -%} 
-              <a class="page-link" href="{{ external_site[1].url }}">{{ external_site[0] | escape }}</a>
-            {%- endfor -%}
-          {%- endunless -%}
+          {%- for external_site in site.extra_nav -%} 
+          <a class="page-link" href="{{ external_site[1].url }}">{{ external_site[0] | escape }}</a>
+          {%- endfor -%}
         </div>
       </nav>
     {%- endif -%}

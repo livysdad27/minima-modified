@@ -34,6 +34,9 @@ layout: default
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
+        {% if post.content.size > post.excerpt.size %}
+          <p><a href="{{ post.url }}">(more...)</a></p>
+        {% endif %}
       </li>
       {%- endfor -%}
     </ul>

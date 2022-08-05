@@ -35,7 +35,7 @@ layout: default
           {{ post.excerpt }}
         {%- endif -%}
         {%- if post.content.size > post.excerpt.size -%}
-        <p><a href="{{ post.url | relative_url }}">(more...)</a></p>
+        <a href="{{ post.url | relative_url }}"> (read more...)</a>
         {%- endif -%}
       </li>
       {%- endfor -%}

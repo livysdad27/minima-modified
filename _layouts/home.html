@@ -34,7 +34,7 @@ layout: default
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
-        HIHI {{ post.content.size }} HIHI
+        HIHI {{ post.excerpt.size }} HIHI
         {%- if post.content.size > post.excerpt.size -%}
         <a href="{{ post.url | relative_url }}"> (read more...)</a>
         {%- endif -%}

@@ -28,12 +28,13 @@ layout: default
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | post.excerpt.size | post.content.size | escape }}
+            {{ post.title | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
+        HIHI post.content.size and post.excerpt.size HIHI
         {%- if post.content.size > post.excerpt.size -%}
         <a href="{{ post.url | relative_url }}"> (read more...)</a>
         {%- endif -%}
